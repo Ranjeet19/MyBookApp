@@ -1,7 +1,9 @@
 import 'package:bookapp/view/detailpage.dart';
+import 'package:bookapp/view/slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:photo_view/photo_view.dart';
 
 import '../categories.dart';
 import '../model/book.dart';
@@ -16,9 +18,9 @@ class HomePage extends StatelessWidget {
           foregroundColor: Colors.black87,
           elevation: 0,
           title: Padding(
-            padding: const EdgeInsets.only(left: 10),
+            padding: const EdgeInsets.only(left: 10,),
             child: Text(
-              "Hi, John!",
+              "Hi, Ranjeet!",
               style: TextStyle(
                 color: Colors.black87,
                 fontWeight: FontWeight.w700,
@@ -46,21 +48,22 @@ class HomePage extends StatelessWidget {
         ),
         body: ListView(
           children: [
+            SizedBox(height: 10,),
             Container(
-              height: 200,
+              height: 196.7,
               width: double.infinity,
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
               color: Colors.cyan,
  
               ),
 
-              child: Image.asset('assets/a.png',fit: BoxFit.fill,),
+              child: Image_Slider(),
             ),
           
              SizedBox(height: 15,),
 
 
-            //  This Container is for above list view
+            //  This Container is for above list view,
             Container(
               height: 250,
               width: double.infinity,
@@ -177,7 +180,10 @@ class HomePage extends StatelessWidget {
                               height: 130,
                               width: double.infinity,
                               color: Colors.red,
-                              child: Image.network(book.image, fit:BoxFit.fill , ), 
+                              child: PhotoView(imageProvider: NetworkImage(book.image),
+
+                                // child: Image.network(book.image, fit:BoxFit.fill , ),
+                                ), 
                             ),
                          
                             Padding(

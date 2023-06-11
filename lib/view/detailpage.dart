@@ -13,10 +13,12 @@ Detail_Page(this.book);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body:Container(
-        child: Text(book.label),
-      ) ,
+    return SafeArea(
+      child: Scaffold(
+        body:Container(
+          child: Text(book.label),
+        ) ,
+      ),
     );
   }
 }
