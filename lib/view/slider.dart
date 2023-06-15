@@ -24,14 +24,17 @@ class _Image_SliderState extends State<Image_Slider> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20,
-      // color: Colors.red,
+      height: 106.7,
+      color: Colors.red,
       width: double.infinity,
-      child: Column(children: [
+      child: Column(
+        children: [
         Stack(
           children: [
             InkWell(
-              onTap:(){ print(currentIndex);},
+              onTap:(){ 
+                print(currentIndex);
+                },
 
               child: CarouselSlider(
                 items: imgList.map(
@@ -46,7 +49,7 @@ class _Image_SliderState extends State<Image_Slider> {
                 options: CarouselOptions(
                   scrollPhysics: const BouncingScrollPhysics(),
                   autoPlay: true,
-                  aspectRatio: 2,
+                  aspectRatio: 1,
                   viewportFraction: 1,
                   onPageChanged:(index,reason){
                     setState(() {

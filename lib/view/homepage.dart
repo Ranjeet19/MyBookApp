@@ -1,12 +1,13 @@
 import 'package:bookapp/view/detailpage.dart';
-import 'package:bookapp/view/slider.dart';
+// import 'package:bookapp/view/slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:photo_view/photo_view.dart';
 
-import '../categories.dart';
+// import '../categories.dart';
 import '../model/book.dart';
+// import 'drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,11 +15,44 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+ drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+                
+                 decoration: BoxDecoration(
+              color:Colors.blue,
+
+              ),
+              child: 
+              Column(
+                // mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                IconButton(onPressed: (){
+                  Navigator.pop(context);
+                }, icon: Icon(CupertinoIcons.back, color: Colors.white,)),
+              ],),
+           
+              ),
+            
+
+            ListTile(
+              
+              title: Text("Favourite"),
+            )
+          ],
+        ),
+      ), 
+      
+      
+      // App Bar Start from here////
+      appBar: AppBar(
+          
           foregroundColor: Colors.black87,
           elevation: 0,
           title: Padding(
-            padding: const EdgeInsets.only(left: 10,),
+            padding: const EdgeInsets.only(left: 0,),
             child: Text(
               "Hi, Ranjeet!",
               style: TextStyle(
@@ -33,13 +67,13 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.only(right: 18),
               child: Row(
                 children: [
-                  IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.search)),
+                  IconButton(
+                    onPressed: (){}, icon: Icon(CupertinoIcons.search)),
                   // IconButton(icon: ),
                   SizedBox(
                     width: 1,
                   ),
-                  // IconButton(onPressed: (onPressed), icon: icon),
-                                    IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.bell)),
+                IconButton(onPressed: (){}, icon: Icon(CupertinoIcons.bell)),
 
                 ],
               ),
@@ -57,7 +91,7 @@ class HomePage extends StatelessWidget {
  
               ),
 
-              child: Image_Slider(),
+              child:Image.asset("assets/a.png", fit: BoxFit.fill,),
             ),
           
              SizedBox(height: 15,),
@@ -182,7 +216,6 @@ class HomePage extends StatelessWidget {
                               color: Colors.red,
                               child: PhotoView(imageProvider: NetworkImage(book.image),
 
-                                // child: Image.network(book.image, fit:BoxFit.fill , ),
                                 ), 
                             ),
                          
