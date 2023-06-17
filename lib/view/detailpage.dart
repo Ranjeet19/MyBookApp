@@ -75,8 +75,9 @@ class Detail_Page extends StatelessWidget {
                     padding: const EdgeInsets.all(5.0),
                     child: Text(
                       book.label,
+                      
                       style: TextStyle(
-                        color: Colors.black54,
+                        color: Colors.black87,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -101,43 +102,49 @@ class Detail_Page extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 0, left: 20, right: 5),
                 child: Text(
                   book.detail,
+                  maxLines: 7,
+                  
+                  overflow: TextOverflow.ellipsis,
+
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.blue[500],
+                    color: Colors.blueGrey,
                   ),
                 ),
               ),
             ),
 
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 30),
-                  child: ElevatedButton(
+            Padding(
+              padding: const EdgeInsets.only(top:50.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
                       onPressed: () {},
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 15, horizontal: 25),
+                            vertical: 10, horizontal: 20),
                         child: Text(
                           "Read Book",
-                          style: TextStyle(color: Colors.white, fontSize: 14),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       )),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 30),
-                  child: ElevatedButton(
+                  ElevatedButton(
                       onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 196, 196, 196),
+                      ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 15, horizontal: 25),
+                            vertical: 10, horizontal: 20),
                         child: Text(
                           "More Info",
-                          style: TextStyle(color: Colors.white, fontSize: 14),
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
+                        
                       )),
-                ),
-              ],
+                ],
+              ),
             )
           ],
         ),

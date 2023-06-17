@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData.light().copyWith(
           scaffoldBackgroundColor: Color(0xFFF2F5F9),
-          // appBarTheme: AppBarTheme(
-          //   color: Color(0xFFF2F5F9),
-          // )
+          appBarTheme: AppBarTheme(
+            color: Colors.blue[500],
+          )
         
         ),
     

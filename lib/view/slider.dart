@@ -49,11 +49,11 @@ class _Image_SliderState extends State<Image_Slider> {
                 options: CarouselOptions(
                   scrollPhysics: const BouncingScrollPhysics(),
                   autoPlay: true,
-                  aspectRatio: 1,
+                  aspectRatio: 2,
                   viewportFraction: 1,
                   onPageChanged:(index,reason){
                     setState(() {
-                      currentIndex :index;
+                      currentIndex :++index ;
                     });
                   }
                 ),
@@ -67,11 +67,14 @@ class _Image_SliderState extends State<Image_Slider> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: imgList.asMap().entries.map((entry){
-                  // print(entry);
-                  // print(entry.key);
+                  print(entry.key);
 
                   return GestureDetector(
-                    onTap: ()=>carouselController.animateToPage(entry.key),
+                    onTap: (){
+                                        print(entry);
+
+                    },
+                    // onTap: ()=>carouselController.animateToPage(entry.key),
                     child: Container(
                       width:currentIndex == entry.key? 17:7 ,
                       height: 7.0,
@@ -83,7 +86,7 @@ class _Image_SliderState extends State<Image_Slider> {
                     ),
                   );
                 }).toList(),
-              ),)
+              ),),
           ],
         )
       ]),
