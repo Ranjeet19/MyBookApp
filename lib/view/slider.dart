@@ -60,33 +60,33 @@ class _Image_SliderState extends State<Image_Slider> {
               ),
             ),
 
-            Positioned(
-              bottom: 10,
-              left: 0,
-              right: 0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: imgList.asMap().entries.map((entry){
-                  print(entry.key);
+            // Positioned(
+            //   bottom: 10,
+            //   left: 0,
+            //   right: 0,
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.center,
+            //     children: imgList.asMap().entries.map((entry){
+            //       print(entry.key);
 
-                  return GestureDetector(
-                    onTap: (){
-                                        print(entry);
+            //       return GestureDetector(
+            //         onTap: (){
+            //                             print(entry);
 
-                    },
-                    // onTap: ()=>carouselController.animateToPage(entry.key),
-                    child: Container(
-                      width:currentIndex == entry.key? 17:7 ,
-                      height: 7.0,
-                      margin: EdgeInsets.symmetric(horizontal: 3.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: currentIndex == entry.key? Colors.red: Colors.teal
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),),
+            //         },
+            //         // onTap: ()=>carouselController.animateToPage(entry.key),
+            //         child: Container(
+            //           width:currentIndex == entry.key? 17:7 ,
+            //           height: 7.0,
+            //           margin: EdgeInsets.symmetric(horizontal: 3.0),
+            //           decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(10),
+            //             color: currentIndex == entry.key? Colors.red: Colors.teal
+            //           ),
+            //         ),
+            //       );
+            //     }).toList(),
+            //   ),),
           ],
         )
       ]),
