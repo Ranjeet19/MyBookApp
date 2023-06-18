@@ -1,16 +1,5 @@
-# bookapp
+Welcome to the Book App repository! This Flutter application is designed to provide a convenient and intuitive way for users to explore and manage their collection of books. With this app, users can discover new books, add them to their library, track their reading progress, and much more.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![viber_image_2023-06-18_13-47-46-075](https://github.com/Ranjeet19/MyBookApp/assets/53162983/4a0cd504-5b7b-45e0-a6ab-527061a4c43c)
+![viber_image_2023-06-18_13-47-45-984](https://github.com/Ranjeet19/MyBookApp/assets/53162983/38bf4961-ba8d-43b1-a673-2d34b23a2928)
+![viber_image_2023-06-18_13-47-45-883](https://github.com/Ranjeet19/MyBookApp/assets/53162983/d600c8c1-5e52-4683-a352-362a33dc4893)
